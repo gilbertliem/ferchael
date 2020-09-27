@@ -1,0 +1,22 @@
+.searchNav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 50px;
+  position: relative;
+  /* top: 10px; */
+}
+
+.search {
+  position: relative;
+  top: 52px;
+}
+
+.searchNav span {
+  color: #ffffff;
+  text-decoration-line: none;
+}
+
+.searchNav span:hover {
+  text-decoration: underline;
+}

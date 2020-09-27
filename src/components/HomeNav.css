@@ -1,0 +1,28 @@
+nav {
+  background-color: rgba(0, 0, 0, 0.219);
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #ffffff;
+  padding: 20px 50px;
+}
+
+ul {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.homenav li {
+  list-style: none;
+  cursor: pointer;
+  font-size: 20px;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+  margin: 0 50px;
+}
+
+nav li:hover {
+  text-decoration: underline;
+}
