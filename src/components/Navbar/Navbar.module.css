@@ -1,0 +1,82 @@
+nav {
+  padding: 2rem 4rem;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: uppercase;
+}
+
+a {
+  text-decoration: none;
+  color: #000000;
+  font-size: 1.5rem;
+}
+
+a:hover {
+  color: #5c3d1b;
+}
+
+.logo {
+  height: auto;
+  width: 20rem;
+}
+
+.option {
+  display: flex;
+}
+
+.contact {
+  font-size: 1.7rem;
+  margin-left: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.5rem;
+}
+
+.contact:hover {
+  cursor: pointer;
+}
+
+.galery {
+  font-size: 1.8rem;
+  font-weight: 500;
+  letter-spacing: 0.6rem;
+}
+
+@media all and (max-width: 750px) {
+  .contact {
+    font-size: 1.4rem;
+    letter-spacing: 0.4rem;
+  }
+  .galery {
+    font-size: 1.5rem;
+    letter-spacing: 0.3rem;
+  }
+}
+
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.exit {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 1rem;
+  border-radius: 50%;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.exit:hover {
+  background-color: rgba(202, 195, 195, 0.5);
+}
+
+.close {
+  width: 1rem;
+}

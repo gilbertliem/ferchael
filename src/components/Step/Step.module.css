@@ -1,0 +1,43 @@
+.row {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.col {
+  padding: 3rem;
+  text-align: center;
+}
+
+.head {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 2rem;
+  margin: 1rem 0;
+}
+
+.para {
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+.icon {
+  width: 5rem;
+  height: 5rem;
+}
+
+@media all and (max-width: 960px) {
+  .row {
+    display: flex;
+    flex-direction: column;
+  }
+  .icon {
+    width: 4rem;
+    height: 4rem;
+  }
+  .para {
+    font-size: 1.3rem;
+  }
+  .head {
+    font-size: 1.8rem;
+  }
+}

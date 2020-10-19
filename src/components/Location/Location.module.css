@@ -1,0 +1,54 @@
+.location {
+  min-width: 10rem;
+}
+
+.row {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 2rem;
+}
+
+.cont {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.para {
+  /* border: 1px solid black; */
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 500;
+  padding: 2rem 4rem;
+  line-height: 2.5rem;
+}
+
+strong {
+  text-transform: uppercase;
+}
+
+iframe {
+  width: 45rem;
+  height: 30rem;
+}
+
+@media all and (max-width: 1200px) {
+  .row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 2rem;
+  }
+  iframe {
+    width: 45rem;
+    height: 25rem;
+  }
+}
+
+@media all and (max-width: 750px) {
+  iframe {
+    width: 35rem;
+    height: 20rem;
+  }
+}
