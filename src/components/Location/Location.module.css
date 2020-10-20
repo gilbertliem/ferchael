@@ -27,6 +27,11 @@ strong {
   text-transform: uppercase;
 }
 
+/* .map {
+  width: 5rem;
+  height: auto;
+} */
+
 iframe {
   width: 45rem;
   height: 30rem;
