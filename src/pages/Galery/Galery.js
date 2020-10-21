@@ -206,9 +206,11 @@ function Galery() {
             ? display.map((item) => {
                 return (
                   <li key={item.id}>
-                    {/* <h1>{item.id}</h1> */}
-                    <img src={item.img} alt={item.id} />
-                    {/* <img src={pict} alt={item.category} /> */}
+                    <img
+                      src={require(item.img)}
+                      alt={item.id}
+                      className={styles.list}
+                    />
                   </li>
                 );
               })
@@ -220,3 +222,6 @@ function Galery() {
 }
 
 export default Galery;
+
+/* <h1>{item.id}</h1> */
+/* <img src={pict} alt={item.category} /> */

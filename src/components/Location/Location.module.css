@@ -27,10 +27,17 @@ strong {
   text-transform: uppercase;
 }
 
-/* .map {
-  width: 5rem;
-  height: auto;
+/* .box{
+
 } */
+
+.map {
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* max-width: 10rem; */
+}
 
 iframe {
   width: 45rem;

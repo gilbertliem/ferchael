@@ -15,18 +15,18 @@ function Location() {
               and we will reach you out to discuss
             </div>
           </div>
-          <div>
-            {/* <div className={styles.map}> */}
-            {/* <img src={map} alt="Surabaya" /> */}
+          <div className={styles.box}>
+            {/* <div> */}
+            <img src={map} alt="Surabaya" className={styles.map} />
             {/* </div> */}
-            <iframe
+            {/* <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d506584.92719152605!2d112.43248517783398!3d-7.275533380936384!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7fbf8381ac47f%3A0x3027a76e352be40!2sSurabaya%2C%20Surabaya%20City%2C%20East%20Java!5e0!3m2!1sen!2sid!4v1602945568093!5m2!1sen!2sid"
               frameborder="0"
               style={{ border: 1 }}
               allowfullscreen=""
               aria-hidden="false"
               tabindex="0"
-            />
+            /> */}
           </div>
         </div>
       </div>
