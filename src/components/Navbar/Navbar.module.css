@@ -7,53 +7,59 @@ nav {
   justify-content: space-between;
   align-items: center;
   text-transform: uppercase;
+  border-bottom: 5px solid #5c3d1b;
+  border-radius: 20px;
+  padding-inline-start: 0;
+  padding: 0 1rem;
+  position: relative;
+  /* border: 1px solid rgb(0, 0, 0); */
 }
+
+.link {
+  display: flex;
+  align-items: center;
+}
+
+.link img {
+  height: auto;
+  width: 20rem;
+}
+
+/* .link img:hover {
+} */
 
 a {
   text-decoration: none;
   color: #000000;
   font-size: 1.5rem;
-}
-
-a:hover {
   color: #5c3d1b;
 }
 
-.logo {
-  height: auto;
-  width: 20rem;
-}
-
 .option {
+  /* border: 1px solid black; */
   display: flex;
+  justify-content: space-between;
 }
 
 .contact {
   font-size: 1.7rem;
-  margin-left: 1rem;
+  padding: 1rem;
   font-weight: 500;
   letter-spacing: 0.5rem;
-}
-
-.contact:hover {
+  color: #5c3d1b;
   cursor: pointer;
 }
 
+.contact:hover,
+.galery:hover {
+  font-weight: 700;
+}
+
 .galery {
+  padding: 1rem;
   font-size: 1.8rem;
   font-weight: 500;
   letter-spacing: 0.6rem;
-}
-
-@media all and (max-width: 750px) {
-  .contact {
-    font-size: 1.4rem;
-    letter-spacing: 0.4rem;
-  }
-  .galery {
-    font-size: 1.5rem;
-    letter-spacing: 0.3rem;
-  }
 }
 
 .modal {
@@ -79,4 +85,46 @@ a:hover {
 
 .close {
   width: 1rem;
+}
+
+.burger {
+  display: none;
+  cursor: pointer;
+}
+
+.burger div {
+  width: 2rem;
+  height: 0.3rem;
+  background-color: #5c3d1b;
+  margin: 0.5rem;
+}
+
+@media screen and (max-width: 900px) {
+  body {
+    overflow-x: hidden;
+  }
+  .option {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    position: absolute;
+    right: 0rem;
+    top: 5rem;
+    background-color: #5c3d1b28;
+    z-index: 1;
+    width: 40%;
+    transform: translateX(150%);
+    transition: transform -0.5 ease-in;
+  }
+  a,
+  .contact {
+    color: #5c3d1b;
+  }
+  .burger {
+    display: block;
+  }
+  .navActive {
+    display: block;
+    transform: translateX(0%);
+  }
 }

@@ -13,12 +13,14 @@ export default class Footer extends Component {
       <>
         <div className={styles.footer}>
           <div className={styles.logo}>
-            <img src={facebook} alt="" />
-            <img src={instagram} alt="" />
-            <img src={twitter} alt="" />
-            <img src={linked} alt="" />
+            {/* <img src={facebook} alt="" /> */}
+            <a href="https://www.instagram.com/ferchael.interior/">
+              <img src={instagram} alt="" />
+            </a>
+            {/* <img src={twitter} alt="" /> */}
+            {/* <img src={linked} alt="" /> */}
           </div>
-          <p>Copyright 2020</p>
+          <p>Copyright © 2020. All Rights Reserved.</p>
         </div>
       </>
     );

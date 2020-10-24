@@ -1,214 +1,111 @@
 import React from "react";
-import styles from "../../assets/kitchen/kitchen1.jpeg";
+import styles from "./Cover.module.css";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 // ==================== //
 
 const image = [
   {
-    id: 1,
-    category: "kitchen",
-    img: "../../assets/kitchen/kitchen1.jpeg",
-  },
-  {
-    id: 2,
-    category: "kitchen",
-    img: "../../assets/kitchen/kitchen2.jpeg",
-  },
-  {
-    id: 3,
-    category: "kitchen",
-    img: "../../assets/kitchen/kitchen3.jpeg",
-  },
-  {
-    id: 4,
-    category: "kitchen",
-    img: "../../assets/kitchen/kitchen4.jpeg",
-  },
-  {
-    id: 5,
-    category: "kitchen",
-    img: "../../assets/kitchen/kitchen5.jpeg",
-  },
-  {
     id: 6,
     category: "kitchen",
-    img: "../../assets/kitchen/kitchen6.jpeg",
-  },
-  {
-    id: 7,
-    category: "kitchen",
-    img: "../../assets/kitchen/kitchen7.mp4",
-  },
-  {
-    id: 8,
-    category: "kitchen",
-    img: "../../assets/kitchen/kitchen8.mp4",
-  },
-  {
-    id: 9,
-    category: "kitchen",
-    img: "../../assets/kitchen/kitchen9.mp4",
-  },
-  {
-    id: 10,
-    category: "kitchen",
-    img: "../../assets/kitchen/kitchen10.jpeg",
-  },
-  {
-    id: 11,
-    category: "drobe",
-    img: "../../assets/drobe/drobe1.jpeg",
-  },
-  {
-    id: 12,
-    category: "drobe",
-    img: "../../assets/drobe/drobe2.jpeg",
-  },
-  {
-    id: 13,
-    category: "dining",
-    img: "../../assets/dining/dining1.jpeg",
-  },
-  {
-    id: 14,
-    category: "bed",
-    img: "../../assets/bed/bed1.jpeg",
-  },
-  {
-    id: 15,
-    category: "bed",
-    img: "../../assets/bed/bed2.jpeg",
-  },
-  {
-    id: 16,
-    category: "bed",
-    img: "../../assets/bed/bed3.jpeg",
-  },
-  {
-    id: 17,
-    category: "bed",
-    img: "../../assets/bed/bed4.jpeg",
-  },
-  {
-    id: 18,
-    category: "bed",
-    img: "../../assets/bed/bed5.jpeg",
-  },
-  {
-    id: 19,
-    category: "wardrobe",
-    img: "../../assets/wardrobe/wardrobe1.jpeg",
-  },
-  {
-    id: 20,
-    category: "wardrobe",
-    img: "../../assets/wardrobe/wardrobe2.jpeg",
-  },
-  {
-    id: 21,
-    category: "wardrobe",
-    img: "../../assets/wardrobe/wardrobe3.jpeg",
-  },
-  {
-    id: 22,
-    category: "wardrobe",
-    img: "../../assets/wardrobe/wardrobe4.jpeg",
-  },
-  {
-    id: 23,
-    category: "wardrobe",
-    img: "../../assets/wardrobe/wardrobe5.jpeg",
-  },
-  {
-    id: 24,
-    category: "wardrobe",
-    img: "../../assets/wardrobe/wardrobe6.jpeg",
-  },
-  {
-    id: 25,
-    category: "apartment",
-    img: "../../assets/apart/apart1.jpeg",
-  },
-  {
-    id: 26,
-    category: "apartment",
-    img: "../../assets/apart/apart2.jpeg",
-  },
-  {
-    id: 27,
-    category: "apartment",
-    img: "../../assets/apart/apart3.jpeg",
-  },
-  {
-    id: 28,
-    category: "living",
-    img: "../../assets/living/living1.jpeg",
-  },
-  {
-    id: 29,
-    category: "living",
-    img: "../../assets/living/living2.jpeg",
+    img: require("../../assets/kitchen/kitchen6.jpeg"),
   },
   {
     id: 30,
     category: "living",
-    img: "../../assets/living/living3.jpeg",
-  },
-  {
-    id: 31,
-    category: "living",
-    img: "../../assets/living/living4.jpeg",
+    img: require("../../assets/living/living3.jpeg"),
   },
   {
     id: 32,
     category: "living",
-    img: "../../assets/living/living5.jpeg",
+    img: require("../../assets/living/living5.jpeg"),
   },
   {
     id: 33,
     category: "resto",
-    img: "../../assets/resto/resto1.jpeg",
-  },
-  {
-    id: 34,
-    category: "resto",
-    img: "../../assets/resto/resto2.jpeg",
+    img: require("../../assets/resto/resto1.jpeg"),
   },
   {
     id: 35,
     category: "resto",
-    img: "../../assets/resto/resto3.jpeg",
-  },
-  {
-    id: 36,
-    category: "resto",
-    img: "../../assets/resto/resto4.jpeg",
+    img: require("../../assets/resto/resto3.jpeg"),
   },
   {
     id: 37,
     category: "resto",
-    img: "../../assets/resto/resto5.jpeg",
+    img: require("../../assets/resto/resto5.jpeg"),
+  },
+  {
+    id: 20,
+    category: "wardrobe",
+    img: require("../../assets/wardrobe/wardrobe2.jpeg"),
+  },
+  {
+    id: 23,
+    category: "wardrobe",
+    img: require("../../assets/wardrobe/wardrobe5.jpeg"),
   },
 ];
 
 // ==================== //
 
 function Cover() {
-  let displayImage = image.map((item) => {
-    console.log(item);
-  });
-  console.log("image", displayImage);
+  const display = image;
+  console.log(display);
+  console.log(display);
+
+  const settings = {
+    dots: true,
+    infinite: true,
+    fade: false,
+    autoplay: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    arrows: false,
+    swipeToSlide: true,
+    responsive: [
+      {
+        breakpoint: 1350,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 925,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  };
+
   return (
     <>
       <div>
-        <img src="" alt="" />
-        {/* {image.length > 0
-          ? image.map((img) => (
-              <div>
-                <img src={img.img} alt="" />
-              </div>
-            ))
-          : "Data is not available"} */}
+        <ul className={styles.container}>
+          <Slider {...settings}>
+            {display.length > 0
+              ? display.map((item) => {
+                  return (
+                    <div>
+                      <li key={item.id} className={styles.list}>
+                        <img
+                          src={item.img}
+                          alt={item.category}
+                          className={styles.image}
+                        />
+                      </li>
+                    </div>
+                  );
+                })
+              : ""}
+          </Slider>
+        </ul>
       </div>
     </>
   );

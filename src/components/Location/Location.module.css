@@ -1,12 +1,47 @@
 .location {
   min-width: 10rem;
+  background: linear-gradient(
+    to top,
+    #fff 0%,
+    #000 5%,
+    #000 95%,
+    rgba(255, 255, 255, 0.2) 100%
+  );
+  color: white;
 }
 
 .row {
-  display: flex;
-  justify-content: space-evenly;
-  padding: 2rem;
+  padding: 4rem;
+  align-items: center;
 }
+
+.cont {
+  margin: 2rem 0;
+  padding: 5rem 3rem;
+  /* border-left: 1px solid #5c3d1b;
+  border-right: 1px solid #5c3d1b; */
+}
+
+.para {
+  /* border: 1px solid black; */
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 500;
+  padding: 0 4rem;
+  line-height: 2.5rem;
+  letter-spacing: 0.2rem;
+}
+
+strong {
+  text-transform: uppercase;
+}
+
+/* @media all and (max-width: 1200px) {
+  .box {
+    width: 30rem;
+    height: 30rem;
+  }
+} */
 
 .cont {
   display: flex;
@@ -14,53 +49,34 @@
   align-items: center;
 }
 
-.para {
-  /* border: 1px solid black; */
-  text-align: center;
-  font-size: 1.6rem;
-  font-weight: 500;
-  padding: 2rem 4rem;
-  line-height: 2.5rem;
+.box {
+  max-width: 50rem;
+  max-height: 50rem;
+  border-radius: 50%;
+  overflow: hidden;
 }
-
-strong {
-  text-transform: uppercase;
-}
-
-/* .box{
-
-} */
 
 .map {
-  border: 1px solid black;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  /* max-width: 10rem; */
+  zoom: 30%;
+  position: relative;
+  right: 50rem;
+  animation-name: location;
+  animation-duration: 8s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
 }
 
-iframe {
-  width: 45rem;
-  height: 30rem;
-}
-
-@media all and (max-width: 1200px) {
-  .row {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding: 2rem;
+@keyframes location {
+  0% {
+    transform: scale3d(1, 1, 1);
+    position: relative;
+    top: 0rem;
+    left: -50rem;
   }
-  iframe {
-    width: 45rem;
-    height: 25rem;
-  }
-}
-
-@media all and (max-width: 750px) {
-  iframe {
-    width: 35rem;
-    height: 20rem;
+  100% {
+    transform: scale3d(5, 5, 5);
+    position: relative;
+    top: -225rem;
+    left: 100rem;
   }
 }

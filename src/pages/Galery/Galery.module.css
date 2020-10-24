@@ -1,4 +1,80 @@
+.galery {
+  padding: 2rem;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+}
+
+/* GENRE */
+
+.category {
+  padding-inline-start: 0;
+  margin-bottom: 3rem;
+  /* border: 1px solid black; */
+  max-width: 90%;
+}
+
+.categoryBtn::before {
+  content: "";
+}
+
+.categoryBtn::after {
+  text-decoration: underline;
+}
+
+@media all and (max-width: 1020px) {
+  .category {
+    max-width: 80%;
+  }
+}
+
+.category button {
+  font-size: 1.6rem;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  border: none;
+  background-color: transparent;
+  outline: none;
+  text-transform: uppercase;
+  /* border: 1px solid black; */
+}
+
+.category button:hover {
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.active {
+  text-decoration: underline;
+}
+
+/* IMAGE LIST */
 .list {
-  width: 20px;
-  height: 20px;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  grid-gap: 2rem;
+  padding-inline-start: 0;
+}
+
+.image {
+  width: 100%;
+  /* width: 20rem;
+  height: 30rem; */
+  border-radius: 2rem;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  /* padding: 5px; */
+}
+
+.modal {
+  list-style: none;
+}
+
+.modal img {
+  max-width: 45rem;
 }

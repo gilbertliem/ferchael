@@ -8,15 +8,12 @@ import close from "../../assets/navbar/close.svg";
 
 const customStyles = {
   content: {
-    // width: "50rem",
-    // height: "50rem",
     top: "50%",
     left: "50%",
     right: "auto",
     bottom: "auto",
     marginRight: "-50%",
     transform: "translate(-50%, -50%)",
-    // background: "#777373",
     overlay: {
       background: "black",
     },
@@ -27,6 +24,7 @@ Modal.setAppElement("#root");
 
 function Navbar() {
   const [open, setOpen] = useState(false);
+  const [switchOn, setSwitchOn] = useState(false);
 
   const requestClose = () => {
     setOpen(false);
@@ -36,12 +34,16 @@ function Navbar() {
     setOpen(true);
   };
 
+  const slide = () => {
+    setSwitchOn(true);
+  };
+
   return (
     <>
       <nav>
         <ul className={styles.nav}>
-          <Link to="./">
-            <img src={logo} alt="ferchael" className={styles.logo} />
+          <Link to="./" className={styles.link}>
+            <img src={logo} alt="ferchael" />
           </Link>
           <div className={styles.option}>
             <Link to="./galery" className={styles.galery}>
@@ -61,6 +63,14 @@ function Navbar() {
               </button>
               <Contact setOpen={setOpen} />
             </Modal>
+          </div>
+          <div
+            className={switchOn ? styles.navActive : styles.burger}
+            onClick={slide}
+          >
+            <div className={styles.line1}></div>
+            <div className={styles.line2}></div>
+            <div className={styles.line3}></div>
           </div>
         </ul>
       </nav>
