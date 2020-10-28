@@ -4,7 +4,7 @@ import Modal from "react-modal";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { act } from "react-dom/test-utils";
+import { HomeWrapper } from "./Galery-styled";
 
 // ==================== //
 
@@ -260,18 +260,18 @@ function Galery() {
   const [open, setOpen] = useState(false);
   let [state, setstate] = useState([]);
   const [movieList, setMovieList] = useState([]);
-  const [activeClass, setActiveClass] = useState("active");
+  // const [activeClass, setActiveClass] = useState("active");
 
   useEffect(() => {
     setMovieList(display);
-  }, []);
+  }, [display]);
 
   const requestClose = () => setOpen(false);
 
   const openModal = (e) => {
     let id = e.target.id;
     // console.log(id);
-    let detail = display.filter((item) => item.id == id);
+    let detail = display.filter((item) => item.id === id);
     // console.log(detail);
     setstate(detail);
     // console.log(state);
@@ -285,7 +285,7 @@ function Galery() {
     autoplay: false,
     speed: 500,
     slidesToShow: 5,
-    slidesToScroll: 1,
+    slidesToScroll: 3,
     arrows: true,
     swipeToSlide: true,
     responsive: [
@@ -300,7 +300,14 @@ function Galery() {
         breakpoint: 1025,
         settings: {
           slidesToShow: 2,
-          slidesToScroll: 2,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 720,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
         },
       },
     ],
@@ -309,10 +316,10 @@ function Galery() {
   const sort = (e) => {
     // console.log(e.target.textContent);
     let movieCategories = display.filter(
-      (item) => item.category == e.target.textContent
+      (item) => item.category === e.target.textContent
     );
     // console.log(movieCategories);
-    if (e.target.textContent == "all") {
+    if (e.target.textContent === "all") {
       setMovieList(display);
     } else {
       setMovieList(movieCategories);
@@ -326,34 +333,25 @@ function Galery() {
       <div className={styles.galery}>
         <div className={styles.row}>
           <div className={styles.category}>
-            <Slider {...settings}>
-              {type.length > 0
-                ? type.map((genres) => {
-                    return (
-                      // <div>
-                      //   <input
-                      //     type="radio"
-                      //     name={genres.category}
-                      //     id={genres.category}
-                      //     key={genres.id}
-                      //   />
-                      //   <label htmlFor={genres.category}>
-                      //     {genres.category}
-                      //   </label>
-                      // </div>
-                      <button
-                        className={styles.burger}
-                        key={genres.id}
-                        onClick={(e) => {
-                          sort(e);
-                        }}
-                      >
-                        {genres.category}
-                      </button>
-                    );
-                  })
-                : ""}
-            </Slider>
+            <HomeWrapper>
+              <Slider {...settings}>
+                {type.length > 0
+                  ? type.map((genres) => {
+                      return (
+                        <button
+                          className={styles.burger}
+                          key={genres.id}
+                          onClick={(e) => {
+                            sort(e);
+                          }}
+                        >
+                          {genres.category}
+                        </button>
+                      );
+                    })
+                  : ""}
+              </Slider>
+            </HomeWrapper>
           </div>
         </div>
         <ul className={styles.list}>

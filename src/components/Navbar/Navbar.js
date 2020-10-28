@@ -24,7 +24,7 @@ Modal.setAppElement("#root");
 
 function Navbar() {
   const [open, setOpen] = useState(false);
-  const [switchOn, setSwitchOn] = useState(false);
+  // const [switchOn, setSwitchOn] = useState(false);
 
   const requestClose = () => {
     setOpen(false);
@@ -34,9 +34,9 @@ function Navbar() {
     setOpen(true);
   };
 
-  const slide = () => {
-    setSwitchOn(true);
-  };
+  // const slide = () => {
+  //   setSwitchOn(true);
+  // };
 
   return (
     <>
@@ -64,14 +64,14 @@ function Navbar() {
               <Contact setOpen={setOpen} />
             </Modal>
           </div>
-          <div
+          {/* <div
             className={switchOn ? styles.navActive : styles.burger}
             onClick={slide}
           >
             <div className={styles.line1}></div>
             <div className={styles.line2}></div>
             <div className={styles.line3}></div>
-          </div>
+          </div> */}
         </ul>
       </nav>
     </>

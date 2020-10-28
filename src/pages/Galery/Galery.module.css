@@ -10,6 +10,7 @@
 /* GENRE */
 
 .category {
+  border-radius: 50px;
   padding-inline-start: 0;
   margin-bottom: 3rem;
   /* border: 1px solid black; */
@@ -33,10 +34,10 @@
 .category button {
   font-size: 1.6rem;
   font-weight: 500;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 0;
   border-radius: 20px;
   border: none;
-  background-color: transparent;
+  background-color: #5c3d1b81;
   outline: none;
   text-transform: uppercase;
   /* border: 1px solid black; */

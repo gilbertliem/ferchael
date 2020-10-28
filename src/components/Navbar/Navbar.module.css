@@ -8,11 +8,9 @@ nav {
   align-items: center;
   text-transform: uppercase;
   border-bottom: 5px solid #5c3d1b;
-  border-radius: 20px;
   padding-inline-start: 0;
   padding: 0 1rem;
   position: relative;
-  /* border: 1px solid rgb(0, 0, 0); */
 }
 
 .link {
@@ -25,9 +23,6 @@ nav {
   width: 20rem;
 }
 
-/* .link img:hover {
-} */
-
 a {
   text-decoration: none;
   color: #000000;
@@ -36,7 +31,6 @@ a {
 }
 
 .option {
-  /* border: 1px solid black; */
   display: flex;
   justify-content: space-between;
 }
@@ -68,6 +62,19 @@ a {
   align-items: center;
 }
 
+@media all and (max-width: 1020px) {
+  .option {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  .contact,
+  .galery {
+    letter-spacing: 0.2rem;
+    padding: 0.5rem;
+  }
+}
+
 .exit {
   position: absolute;
   top: 0;
@@ -87,6 +94,7 @@ a {
   width: 1rem;
 }
 
+/* 
 .burger {
   display: none;
   cursor: pointer;
@@ -127,4 +135,4 @@ a {
     display: block;
     transform: translateX(0%);
   }
-}
+} */

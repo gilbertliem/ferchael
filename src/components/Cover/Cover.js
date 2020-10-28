@@ -1,8 +1,8 @@
 import React from "react";
 import styles from "./Cover.module.css";
 import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+// import "slick-carousel/slick/slick.css";
+// import "slick-carousel/slick/slick-theme.css";
 
 // ==================== //
 
@@ -53,32 +53,26 @@ const image = [
 
 function Cover() {
   const display = image;
-  console.log(display);
-  console.log(display);
 
   const settings = {
-    dots: true,
-    infinite: true,
-    fade: false,
+    dots: false,
+    arrows: false,
+    slidesToShow: 1,
+    slidesToScroll: 1,
     autoplay: true,
     speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    arrows: false,
-    swipeToSlide: true,
+    fade: true,
+    swipeToSlide: false,
+    infinite: true,
+    className: "center",
+    centerMode: true,
     responsive: [
       {
-        breakpoint: 1350,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-        },
-      },
-      {
-        breakpoint: 925,
+        breakpoint: 1200,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
+          infinite: true,
         },
       },
     ],
@@ -86,26 +80,35 @@ function Cover() {
 
   return (
     <>
-      <div>
-        <ul className={styles.container}>
-          <Slider {...settings}>
-            {display.length > 0
-              ? display.map((item) => {
-                  return (
-                    <div>
-                      <li key={item.id} className={styles.list}>
-                        <img
-                          src={item.img}
-                          alt={item.category}
-                          className={styles.image}
-                        />
-                      </li>
-                    </div>
-                  );
-                })
-              : ""}
-          </Slider>
-        </ul>
+      <div className={styles.container}>
+        <div className={styles.title}>
+          <div>
+            "Great person brings joy to the people around, but great Interior
+            Design brings convenience to everyone."
+          </div>
+          <div>-Ferchael-</div>
+        </div>
+        <div className={styles.row}>
+          <ul className={styles.ul}>
+            <Slider {...settings}>
+              {display.length > 0
+                ? display.map((item) => {
+                    return (
+                      <div>
+                        <li key={item.id} className={styles.list}>
+                          <img
+                            src={item.img}
+                            alt={item.category}
+                            className={styles.image}
+                          />
+                        </li>
+                      </div>
+                    );
+                  })
+                : "Picture is not available"}
+            </Slider>
+          </ul>
+        </div>
       </div>
     </>
   );
