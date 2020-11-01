@@ -13,8 +13,15 @@
   background-color: rgba(202, 195, 195, 0.205);
   height: 3rem;
   width: 100%;
-  margin-bottom: 2rem;
   font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.alert {
+  color: red;
+  font-size: 0.7rem;
+  position: relative;
+  top: -1rem;
 }
 
 .message {
@@ -22,19 +29,8 @@
   background-color: rgba(202, 195, 195, 0.205);
   height: 20rem;
   width: 40rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   font-size: 1.6rem;
-}
-
-@media all and (max-width: 700px) {
-  .input {
-    width: 25rem;
-    margin-bottom: 1rem;
-  }
-  .message {
-    width: 25rem;
-    margin-bottom: 1rem;
-  }
 }
 
 .submit {
@@ -42,7 +38,6 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, 0%);
-  /* border: 1px solid black; */
 }
 
 .submitBtn {
@@ -59,4 +54,94 @@
   background-color: rgba(202, 195, 195, 0.5);
   color: black;
   border-radius: 10px;
+  cursor: pointer;
+}
+
+@media all and (max-width: 1450px) {
+  .contact {
+    font-size: 1.4rem;
+  }
+  /* .input{} */
+  .message {
+    width: 40rem;
+  }
+}
+
+@media all and (max-width: 1250px) {
+  .input {
+    height: 2rem;
+  }
+  .message {
+    width: 30rem;
+    height: 15rem;
+  }
+}
+
+@media all and (max-width: 1020px) {
+  .contact {
+    font-size: 1.2rem;
+  }
+  .message {
+    width: 25rem;
+  }
+}
+
+@media all and (max-width: 1020px) {
+  .contact {
+    font-size: 1rem;
+  }
+  .input {
+    height: 1.4rem;
+  }
+  .message {
+    width: 25rem;
+    height: 15rem;
+    margin-bottom: 0.5rem;
+  }
+  .submitBtn {
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+}
+
+@media all and (max-width: 720px) {
+  .contact {
+    font-size: 0.8rem;
+  }
+  .input {
+    height: 1.4rem;
+  }
+  .message {
+    width: 22rem;
+    height: 10rem;
+    margin-bottom: 0.5rem;
+  }
+  .submitBtn {
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+  .alert {
+    font-size: 0.5rem;
+  }
+}
+
+@media all and (max-width: 420px) {
+  .contact {
+    font-size: 0.6rem;
+  }
+  .input {
+    height: 1rem;
+  }
+  .message {
+    width: 15rem;
+    height: 5rem;
+    margin-bottom: 0;
+  }
+  .submitBtn {
+    font-size: 0.6rem;
+    font-weight: 600;
+  }
+  .alert {
+    font-size: 0.3rem;
+  }
 }

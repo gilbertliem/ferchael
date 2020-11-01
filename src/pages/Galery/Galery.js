@@ -271,7 +271,7 @@ function Galery() {
   const openModal = (e) => {
     let id = e.target.id;
     // console.log(id);
-    let detail = display.filter((item) => item.id === id);
+    let detail = display.filter((item) => item.id == id);
     // console.log(detail);
     setstate(detail);
     // console.log(state);
@@ -290,24 +290,48 @@ function Galery() {
     swipeToSlide: true,
     responsive: [
       {
-        breakpoint: 1700,
+        breakpoint: 1450,
+        settings: {
+          slidesToShow: 5,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 1020,
+        settings: {
+          slidesToShow: 4,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 780,
         settings: {
           slidesToShow: 3,
           slidesToScroll: 1,
         },
       },
       {
-        breakpoint: 1025,
+        breakpoint: 600,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 1,
+          dots: false,
         },
       },
       {
-        breakpoint: 720,
+        breakpoint: 480,
         settings: {
-          slidesToShow: 1,
+          slidesToShow: 2,
           slidesToScroll: 1,
+          dots: false,
+        },
+      },
+      {
+        breakpoint: 320,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          dots: false,
         },
       },
     ],
@@ -358,7 +382,7 @@ function Galery() {
           {movieList.length > 0
             ? movieList.map((item) => {
                 return (
-                  <li key={item.id} className={styles.image}>
+                  <li key={item.id}>
                     <img
                       onClick={(e) => openModal(e)}
                       src={item.img}

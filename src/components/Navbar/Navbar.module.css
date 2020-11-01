@@ -20,7 +20,7 @@ nav {
 
 .link img {
   height: auto;
-  width: 20rem;
+  width: 25rem;
 }
 
 a {
@@ -62,19 +62,6 @@ a {
   align-items: center;
 }
 
-@media all and (max-width: 1020px) {
-  .option {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-  }
-  .contact,
-  .galery {
-    letter-spacing: 0.2rem;
-    padding: 0.5rem;
-  }
-}
-
 .exit {
   position: absolute;
   top: 0;
@@ -92,6 +79,103 @@ a {
 
 .close {
   width: 1rem;
+}
+
+@media all and (max-width: 1250px) {
+  .link img {
+    height: auto;
+    width: 25rem;
+  }
+}
+
+@media all and (max-width: 1020px) {
+  .link img {
+    height: auto;
+    width: 20rem;
+  }
+  .contact,
+  .galery {
+    font-size: 1.5rem;
+  }
+}
+
+@media all and (max-width: 860px) {
+  .link img {
+    height: auto;
+    width: 15rem;
+  }
+  .contact {
+    font-size: 1.3rem;
+    padding: 0;
+  }
+  .galery {
+    font-size: 1.3rem;
+    padding: 0;
+  }
+  .option {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+}
+
+@media all and (max-width: 720px) {
+  .close {
+    width: 0.7rem;
+  }
+  .exit {
+    margin: 0.5rem;
+  }
+}
+
+@media all and (max-width: 600px) {
+  .link img {
+    height: auto;
+    width: 10rem;
+  }
+  .contact,
+  .galery {
+    font-size: 1rem;
+    letter-spacing: 0.1rem;
+  }
+}
+
+@media all and (max-width: 480px) {
+  .link img {
+    height: auto;
+    width: 8rem;
+  }
+  .contact,
+  .galery {
+    font-size: 0.8rem;
+  }
+}
+
+@media all and (max-width: 420px) {
+  .link img {
+    height: auto;
+    width: 7rem;
+  }
+  .contact,
+  .galery {
+    font-size: 0.6rem;
+    letter-spacing: 0.1rem;
+  }
+  .close {
+    width: 0.5rem;
+  }
+}
+
+@media all and (max-width: 330px) {
+  .link img {
+    height: auto;
+    width: 5rem;
+  }
+  .contact,
+  .galery {
+    font-size: 0.4rem;
+    letter-spacing: 0.1rem;
+  }
 }
 
 /* 

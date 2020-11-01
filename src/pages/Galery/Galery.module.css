@@ -8,12 +8,10 @@
 }
 
 /* GENRE */
-
 .category {
   border-radius: 50px;
   padding-inline-start: 0;
   margin-bottom: 3rem;
-  /* border: 1px solid black; */
   max-width: 90%;
 }
 
@@ -23,12 +21,6 @@
 
 .categoryBtn::after {
   text-decoration: underline;
-}
-
-@media all and (max-width: 1020px) {
-  .category {
-    max-width: 80%;
-  }
 }
 
 .category button {
@@ -55,20 +47,18 @@
 .list {
   list-style: none;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
   grid-gap: 2rem;
   padding-inline-start: 0;
+  align-items: center;
 }
 
 .image {
   width: 100%;
-  /* width: 20rem;
-  height: 30rem; */
   border-radius: 2rem;
   display: flex;
-  align-items: center;
   cursor: pointer;
-  /* padding: 5px; */
+  /* border: 1px solid black; */
 }
 
 .modal {
@@ -76,5 +66,79 @@
 }
 
 .modal img {
-  max-width: 45rem;
+  max-width: 40rem;
+}
+
+@media all and (max-width: 1450px) {
+  .category button {
+    font-size: 1.4rem;
+  }
+  .list {
+    grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
+  }
+  .modal img {
+    max-width: 35rem;
+  }
+}
+
+@media all and (max-width: 1120px) {
+  .category button {
+    font-size: 1.2rem;
+  }
+  .list {
+    grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
+  }
+  .modal img {
+    max-width: 30rem;
+  }
+}
+
+@media all and (max-width: 700px) {
+  .modal img {
+    max-width: 25rem;
+  }
+}
+
+@media all and (max-width: 550px) {
+  .category button {
+    font-size: 0.8rem;
+  }
+  .list {
+    grid-template-columns: repeat(auto-fill, minmax(9rem, 1fr));
+    grid-gap: 1rem;
+  }
+  .image {
+    border-radius: 1rem;
+  }
+  .modal img {
+    max-width: 20rem;
+  }
+}
+
+@media all and (max-width: 480px) {
+  .modal img {
+    max-width: 18rem;
+  }
+}
+
+@media all and (max-width: 365px) {
+  .category button {
+    font-size: 0.6rem;
+  }
+  .list {
+    grid-template-columns: repeat(auto-fill, minmax(6rem, 1fr));
+    grid-gap: 1rem;
+  }
+  .image {
+    border-radius: 1rem;
+  }
+  .modal img {
+    max-width: 15rem;
+  }
+}
+
+@media all and (max-width: 320px) {
+  .modal img {
+    max-width: 10rem;
+  }
 }

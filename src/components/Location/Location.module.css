@@ -8,7 +8,6 @@
 }
 
 .cont {
-  margin: 1rem 0;
   padding: 2rem 3rem;
   display: flex;
   justify-content: center;
@@ -16,12 +15,23 @@
 }
 
 .para {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   text-align: center;
   font-size: 2rem;
-  font-weight: 600;
-  padding: 0 4rem;
+  font-weight: 500;
+  padding: 2rem 8rem;
   line-height: 2.5rem;
   letter-spacing: 0.1rem;
+  background: linear-gradient(
+    270deg,
+    #ffffff,
+    #8b451395 10%,
+    #8b451395 30%,
+    #8b451395 50%,
+    #8b451395 70%,
+    #8b451395 90%,
+    #ffffff
+  );
 }
 
 strong {
@@ -41,8 +51,7 @@ strong {
   position: relative;
   right: 50rem;
   animation-name: location;
-  animation-delay: 5s;
-  animation-duration: 5s;
+  animation-duration: 6s;
   animation-fill-mode: forwards;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
@@ -53,75 +62,206 @@ strong {
     transform: scale3d(1, 1, 1);
     position: relative;
     top: -10rem;
-    left: 0rem;
+    left: -10rem;
   }
   100% {
-    transform: scale3d(5, 5, 5);
+    transform: scale3d(6, 6, 6);
     position: relative;
-    top: -250rem;
-    left: 155rem;
+    top: -290rem;
+    left: 190rem;
   }
 }
 
-@media all and (max-width: 1620px) {
-  .cont {
-    margin: 0;
-    padding: 1rem 0;
+@media all and (max-width: 1450px) {
+  .para {
+    font-size: 1.8rem;
+    font-weight: 300;
+    padding: 2rem 4rem;
+    line-height: 2.5rem;
+    letter-spacing: 0.1rem;
+  }
+}
+
+@media all and (max-width: 1260px) {
+  .para {
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 2rem;
+  }
+  .box {
+    max-height: 30rem;
   }
   @keyframes location {
     0% {
       transform: scale3d(1, 1, 1);
       position: relative;
-      top: 0rem;
-      left: -50rem;
+      top: -60rem;
+      left: -60rem;
     }
     100% {
       transform: scale3d(5, 5, 5);
       position: relative;
-      top: -250rem;
-      left: 135rem;
-    }
-  }
-}
-
-@media all and (max-width: 1320px) {
-  .cont {
-    margin: 0;
-    padding: 1rem 0;
-  }
-  @keyframes location {
-    0% {
-      transform: scale3d(1, 1, 1);
-      position: relative;
-      top: 0rem;
-      left: -50rem;
-    }
-    100% {
-      transform: scale3d(5, 5, 5);
-      position: relative;
-      top: -250rem;
-      left: 105rem;
+      top: -260rem;
+      left: 100rem;
     }
   }
 }
 
 @media all and (max-width: 1020px) {
-  .cont {
-    margin: 0;
-    padding: 1rem 0;
+  .para {
+    font-size: 1.4rem;
+    font-weight: 400;
+    /* padding: 2rem 4rem; */
+    line-height: 1.8rem;
+  }
+  .box {
+    max-height: 30rem;
   }
   @keyframes location {
     0% {
       transform: scale3d(1, 1, 1);
       position: relative;
-      top: 0rem;
-      left: -50rem;
+      top: -60rem;
+      left: -80rem;
     }
     100% {
       transform: scale3d(5, 5, 5);
       position: relative;
-      top: -250rem;
+      top: -260rem;
       left: 70rem;
+    }
+  }
+}
+
+@media all and (max-width: 860px) {
+  .row {
+    padding: 2rem;
+    align-items: center;
+  }
+
+  .cont {
+    padding: 2rem 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .para {
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 1.5rem;
+  }
+  .box {
+    max-height: 20rem;
+  }
+  @keyframes location {
+    0% {
+      transform: scale3d(1, 1, 1);
+      position: relative;
+      top: -100rem;
+      left: -70rem;
+    }
+    100% {
+      transform: scale3d(5, 5, 5);
+      position: relative;
+      top: -280rem;
+      left: 60rem;
+    }
+  }
+}
+@media all and (max-width: 720px) {
+  .para {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+  @keyframes location {
+    0% {
+      transform: scale3d(1, 1, 1);
+      position: relative;
+      top: -80rem;
+      left: -70rem;
+    }
+    100% {
+      transform: scale3d(4, 4, 4);
+      position: relative;
+      top: -240rem;
+      left: 30rem;
+    }
+  }
+}
+
+@media all and (max-width: 620px) {
+  .para {
+    font-size: 1rem;
+    line-height: 1.2rem;
+  }
+  @keyframes location {
+    0% {
+      transform: scale3d(1, 1, 1);
+      position: relative;
+      top: -80rem;
+      left: -75rem;
+    }
+    100% {
+      transform: scale3d(4, 4, 4);
+      position: relative;
+      top: -235rem;
+      left: 15rem;
+    }
+  }
+}
+@media all and (max-width: 480px) {
+  .row {
+    padding: 0;
+  }
+  .para {
+    font-size: 0.8rem;
+    line-height: 1rem;
+    padding: 1rem 2rem;
+  }
+  .cont {
+    padding: 1rem 2rem;
+  }
+  @keyframes location {
+    0% {
+      transform: scale3d(1, 1, 1);
+      position: relative;
+      top: -100rem;
+      left: -75rem;
+    }
+    100% {
+      transform: scale3d(4, 4, 4);
+      position: relative;
+      top: -245rem;
+      left: 12rem;
+    }
+  }
+}
+
+@media all and (max-width: 320px) {
+  .para {
+    font-size: 0.6rem;
+    line-height: 1rem;
+    padding: 1rem 2rem;
+  }
+  .box {
+    max-height: 15rem;
+    max-width: 20rem;
+  }
+  .row {
+    padding-top: 1rem;
+  }
+  @keyframes location {
+    0% {
+      transform: scale3d(1, 1, 1);
+      position: relative;
+      top: -100rem;
+      left: -95rem;
+    }
+    100% {
+      transform: scale3d(4, 4, 4);
+      position: relative;
+      top: -245rem;
+      left: 8rem;
     }
   }
 }

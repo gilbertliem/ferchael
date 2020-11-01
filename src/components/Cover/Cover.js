@@ -94,8 +94,8 @@ function Cover() {
               {display.length > 0
                 ? display.map((item) => {
                     return (
-                      <div>
-                        <li key={item.id} className={styles.list}>
+                      <div key={item.id}>
+                        <li className={styles.list}>
                           <img
                             src={item.img}
                             alt={item.category}

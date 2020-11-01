@@ -13,7 +13,7 @@ function Location() {
               are still able to provide our service to everyone of you who
               located outside Surabaya. Send your inquery through{" "}
               <strong>contact us </strong>
-              and we will reach you out to discuss furth
+              and we will reach you out in less than 48 hours!
             </div>
           </div>
           <div className={styles.cont}>

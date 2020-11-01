@@ -40,4 +40,8 @@
   .head {
     font-size: 1.8rem;
   }
+  .col {
+    padding: 1rem 2rem;
+    text-align: center;
+  }
 }
